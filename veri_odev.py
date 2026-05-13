@@ -128,7 +128,7 @@ class Line:
     def __repr__(self):
         return f"Line(name='{self.name}', node_count={len(self.points)})"
 
-   def perpendicular_distance_to_point(self, point):
+    def perpendicular_distance_to_point(self, point):
         import math
         
         if len(self.points) < 2:

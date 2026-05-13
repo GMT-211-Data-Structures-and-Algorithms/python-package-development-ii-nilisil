@@ -127,3 +127,22 @@ class Line:
 
     def __repr__(self):
         return f"Line(name='{self.name}', node_count={len(self.points)})"
+
+def perpendicular_distance_to_point(self, point):
+        import math
+        
+        x1, y1 = self.p1.x, self.p1.y
+        x2, y2 = self.p2.x, self.p2.y
+        
+        
+        x0, y0 = point.x, point.y
+
+        pay = abs((x2 - x1) * (y1 - y0) - (x1 - x0) * (y2 - y1))
+        payda = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+
+        
+        if payda == 0:
+            
+            return math.sqrt((x1 - x0)**2 + (y1 - y0)**2)
+
+        return pay / payda
